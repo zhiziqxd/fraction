@@ -68,18 +68,18 @@ fraction fra_count(fraction a,fraction b,short form){//计算
 			else{//出现错误
                 ans.de=-1;
                 ans.mol=-1;
-				cout<<"error:a is bigger than b";
+				cout<<"error:b is bigger than a";
 			}
 		}
 		else{
 			if(a.mol*b.de-b.mol*a.de<0){//出现错误
-				cout<<"error:a is bigger than b";
+				cout<<"error:b is bigger than a";
                 ans.de=-1;
                 ans.mol=-1;
 			}
 			else{
 				ans.de=a.de*b.de;
-				ans.mol=a.de*b.mol-b.de*a.mol;
+				ans.mol=a.mol*b.de-b.mol*a.de;
 			}
 		}
         break;
